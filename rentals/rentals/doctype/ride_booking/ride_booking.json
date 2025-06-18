@@ -7,11 +7,16 @@
  "field_order": [
   "section_break_wjhz",
   "order",
-  "amended_from",
+  "vehicle",
   "column_break_qpvn",
   "driver",
+  "amended_from",
   "section_break_rque",
-  "item"
+  "items",
+  "section_break_nqbg",
+  "rate",
+  "column_break_idsy",
+  "total_amount"
  ],
  "fields": [
   {
@@ -53,17 +58,46 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "item",
+   "fetch_from": "order.vehicle",
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle",
+   "read_only": 1
+  },
+  {
+   "fieldname": "items",
    "fieldtype": "Table",
-   "label": "Item",
+   "label": "Items",
    "options": "Ride Booking Item"
+  },
+  {
+   "fieldname": "section_break_nqbg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "(In KM)",
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "label": "Rate",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "column_break_idsy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Float",
+   "label": "Total Amount",
+   "non_negative": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-06-16 12:14:15.386877",
+ "modified": "2025-06-17 12:36:07.664590",
  "modified_by": "Administrator",
  "module": "Rentals",
  "name": "Ride Booking",
