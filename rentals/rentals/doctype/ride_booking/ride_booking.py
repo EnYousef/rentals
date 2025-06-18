@@ -6,4 +6,7 @@ from frappe.model.document import Document
 
 
 class RideBooking(Document):
-	pass
+	def validate(self):
+		self.total_amount = 0
+		total_distance = sum(item.distance for item in self.items)
+		self.total_amount = total_distance * self.rate
