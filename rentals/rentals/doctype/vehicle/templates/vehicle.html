@@ -2,6 +2,12 @@
 
 {% block page_content %}
 <h1>{{ title }}</h1>
-{% endblock %}
+{% if image %}
+    <img src="{{ image }}" />
+{% else %}
+    <p>No Image Available</p>
+{% endif %}
+<a href="/order-a-ride/new?vehicle={{ doc.name }}" class="btn btn-info">Book Now</a>
 
+{% endblock %}
 <!-- this is a sample default web page template -->
