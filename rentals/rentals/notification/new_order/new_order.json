@@ -1,0 +1,28 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "creation": "2025-06-22 15:14:52.721372",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Ride Order",
+ "enabled": 1,
+ "event": "Save",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Your get now order from {{ doc.customer_name }} ask for {{ doc.vehicle }}\nyou can accept this orde by <a href=\"http://irfab.cabs/app\">Click Here</a>",
+ "message_type": "Markdown",
+ "modified": "2025-06-22 15:38:40.516711",
+ "modified_by": "Administrator",
+ "module": "Rentals",
+ "name": "New Order",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Get new Order {{ doc.customer_name }}"
+}

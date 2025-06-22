@@ -19,3 +19,15 @@ To display a simple alert in Frappe, use:
 ```javascript
 frappe.show_alert("message content");
 ```
+
+--------------------------------
+Stander Url for API
+
+```
+http://irfan.cabs:8000/api/v2/document/DocTypeName
+```
+---------
+Access methods as API
+```
+http://irfan.cabs:8000/api/v2/method/path_of_methods
+```
