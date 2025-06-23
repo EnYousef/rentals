@@ -92,10 +92,10 @@
    "label": "Condition"
   },
   {
+   "default": "Today",
    "fieldname": "insurance_expiry",
    "fieldtype": "Date",
-   "label": "Insurance Expiry",
-   "reqd": 1
+   "label": "Insurance Expiry"
   }
  ],
  "grid_page_length": 50,
@@ -104,7 +104,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2025-06-22 16:15:41.915943",
+ "modified": "2025-06-23 13:45:43.209184",
  "modified_by": "Administrator",
  "module": "Rentals",
  "name": "Vehicle",

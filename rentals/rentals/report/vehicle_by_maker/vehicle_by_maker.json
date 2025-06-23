@@ -1,0 +1,50 @@
+{
+ "add_total_row": 1,
+ "add_translate_data": 0,
+ "columns": [
+  {
+   "fieldname": "Make",
+   "fieldtype": "Data",
+   "label": "make",
+   "width": 0
+  },
+  {
+   "fieldname": "Count of Cars",
+   "fieldtype": "Int",
+   "label": "count",
+   "width": 0
+  }
+ ],
+ "creation": "2025-06-23 13:51:24.698262",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "make",
+   "fieldtype": "Data",
+   "label": "Make",
+   "mandatory": 1,
+   "wildcard_filter": 1
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2025-06-23 15:07:56.076295",
+ "modified_by": "Administrator",
+ "module": "Rentals",
+ "name": "Vehicle By Maker",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \nmake, count(1) as count\nFROM tabVehicle \ngroup by make\nhaving make like %(make)s;",
+ "ref_doctype": "Vehicle",
+ "report_name": "Vehicle By Maker",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}
