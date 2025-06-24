@@ -29,5 +29,16 @@ http://irfan.cabs:8000/api/v2/document/DocTypeName
 ---------
 Access methods as API
 ```
-http://irfan.cabs:8000/api/v2/method/path_of_methods
+http://irfan.cabs:8000/api/v2/method/path_of_method
+```
+---------------------------------
+Advance of get all
+```python
+frappe.get_all("Ride Booking", fields=["vehicle.make", "count(1) as cars_count",  "sum(total_amount) as total_revenue"], filters={"docstatus":"1"}, group_by="make")
+// result => [{'make': 'BMW', 'cars_count': 2, 'total_revenue': 200.0}]
+```
+
+```python
+frappe.get_all("Ride Booking", fields=["vehicle.make", "count(1) as cars_count",  "sum(total_amount) as total_revenue"], filters={"docstatus":">=1"}, group_by="make")
+// result => [{'make': 'BMW', 'cars_count': 2, 'total_revenue': 200.0}]
 ```
