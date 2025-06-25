@@ -2,7 +2,7 @@
 ## Set Field Value in Frappe
 
 Use the following code to **clear the "amount" field** for a specific document:
-
+```
 ```javascript
 frm.model.set_value(cdt, cdn, "amount", "");
 ```
