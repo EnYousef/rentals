@@ -40,5 +40,24 @@ frappe.get_all("Ride Booking", fields=["vehicle.make", "count(1) as cars_count",
 
 ```python
 frappe.get_all("Ride Booking", fields=["vehicle.make", "count(1) as cars_count",  "sum(total_amount) as total_revenue"], filters={"docstatus":">=1"}, group_by="make")
-// result => [{'make': 'BMW', 'cars_count': 2, 'total_revenue': 200.0}]
+# result => [{'make': 'BMW', 'cars_count': 2, 'total_revenue': 200.0}]
+```
+---------------------------------
+Single DocType:
+```python
+# get Object:
+frappe.get_single("Single DocType Name")
+# Get Value
+frappe.get_single_value("Single DocType Name", "Field Name")
+# Get as Dict
+frappe.db.get_singles_dict("Single DocType Name")
+```
+
+----------------------------------
+Customize attribute of field in js:
+```javascript
+cur_frm.set_df_property("field name", "attribute", "value")
+// Ex
+cur_frm.set_df_property("title", "reqd", 1) // for make field mandatory
+
 ```

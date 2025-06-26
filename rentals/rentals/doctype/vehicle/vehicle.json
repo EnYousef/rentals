@@ -13,13 +13,15 @@
   "license_plate",
   "insurance_expiry",
   "status",
+  "get_summary",
   "column_break_gavr",
   "year",
   "color",
   "is_published",
   "route",
   "image",
-  "condition"
+  "condition",
+  "summary"
  ],
  "fields": [
   {
@@ -96,6 +98,16 @@
    "fieldname": "insurance_expiry",
    "fieldtype": "Date",
    "label": "Insurance Expiry"
+  },
+  {
+   "fieldname": "get_summary",
+   "fieldtype": "Button",
+   "label": "Get Summary"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "HTML",
+   "label": "Summary"
   }
  ],
  "grid_page_length": 50,
@@ -104,7 +116,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2025-06-23 13:45:43.209184",
+ "modified": "2025-06-26 15:45:28.886022",
  "modified_by": "Administrator",
  "module": "Rentals",
  "name": "Vehicle",

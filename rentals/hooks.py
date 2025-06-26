@@ -145,6 +145,9 @@ app_license = "mit"
 # 	}
 # }
 
+# TODO: for testing..
+doc_events = {"ToDo": {"before_insert": "rentals.api.throw_text"}}
+
 # Scheduled Tasks
 # ---------------
 
@@ -241,4 +244,3 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
