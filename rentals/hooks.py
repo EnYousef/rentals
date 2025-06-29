@@ -169,6 +169,8 @@ doc_events = {"ToDo": {"before_insert": "rentals.api.throw_text"}}
 # 	],
 # }
 
+scheduler_events = {"Cron": {"54 13 * * sun": ["rentals.api.schedular_mth"]}}
+
 # Testing
 # -------
 
