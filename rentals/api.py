@@ -1,6 +1,7 @@
 import asyncio
 
 import frappe
+import frappe.push_notification
 
 
 @frappe.whitelist()
@@ -41,3 +42,11 @@ def send_notifications():
 				"email_content": "This is your scheduled notification",
 			}
 		).insert(ignore_permissions=True)
+
+
+def test_enq():
+	"""
+	How Run:
+		frappe.enqueue("rentals.api.test_enq", "short")
+	"""
+	pass
