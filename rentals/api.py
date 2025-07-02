@@ -50,3 +50,11 @@ def test_enq():
 		frappe.enqueue("rentals.api.test_enq", "short")
 	"""
 	pass
+
+
+def get_permission_query_conditions(user):
+	if user != "Administrator":
+		# return "name = 1"
+		return ""
+	else:
+		return ""
