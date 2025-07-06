@@ -61,3 +61,22 @@ cur_frm.set_df_property("field name", "attribute", "value")
 cur_frm.set_df_property("title", "reqd", 1) // for make field mandatory
 
 ```
+
+----------------------------------
+Fixtures
+could be 
+```
+fixtures = ["Rental Settings"] 
+```
+or 
+```
+fixtures = [{"dt": "Vehicle Type", "filters": {"is_standard": 1}}] 
+```
+or both
+```
+fixtures = ["Rental Settings", {"dt": "Vehicle Type", "filters": {"is_standard": 1}}]
+```
+Get Fixtures by:
+```
+bench --site irfan.cabs export-fixtures
+```

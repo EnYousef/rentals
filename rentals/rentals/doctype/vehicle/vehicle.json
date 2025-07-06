@@ -16,6 +16,7 @@
   "get_summary",
   "column_break_gavr",
   "audit_completed",
+  "type",
   "year",
   "color",
   "is_published",
@@ -116,6 +117,12 @@
    "fieldtype": "Check",
    "label": "Audit Completed?",
    "permlevel": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Vehicle Type"
   }
  ],
  "grid_page_length": 50,
@@ -124,7 +131,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2025-07-01 11:18:29.468559",
+ "modified": "2025-07-06 16:51:30.788294",
  "modified_by": "Administrator",
  "module": "Rentals",
  "name": "Vehicle",
