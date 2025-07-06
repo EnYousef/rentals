@@ -6,4 +6,8 @@ from frappe.model.document import Document
 
 
 class Driver(Document):
-	pass
+	def set_full_name(self):
+		self.full_name = f"{self.first_name}{' ' + self.last_name if self.last_name and self.last_name.strip() != '' else ''}"
+
+	def before_save(self):
+		self.set_full_name()

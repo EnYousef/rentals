@@ -45,8 +45,7 @@
    "fieldname": "last_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Last Name",
-   "reqd": 1
+   "label": "Last Name"
   },
   {
    "fieldname": "phone_number",
@@ -70,7 +69,7 @@
  "image_field": "profile",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-11 12:04:31.282333",
+ "modified": "2025-07-06 16:27:48.508645",
  "modified_by": "Administrator",
  "module": "Rentals",
  "name": "Driver",
