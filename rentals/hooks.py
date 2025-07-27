@@ -10,7 +10,7 @@ app_license = "mit"
 
 # required_apps = []
 # could be fixtures = ["Rental Settings"] or fixtures = [{"dt": "Vehicle Type", "filters": {"is_standard": 1}}] or both
-fixtures = ["Rental Settings", {"dt": "Vehicle Type", "filters": {"is_standard": 1}}]
+fixtures = ["Rental Settings", {"dt": "Vehicle Type", "filters": {"is_standard": 1}}, "Workflow"]
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [

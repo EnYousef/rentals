@@ -1,0 +1,122 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Ride Booking",
+  "is_active": 1,
+  "modified": "2025-07-08 12:29:00.614747",
+  "name": "Ride Order Status Change",
+  "override_status": 0,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "All",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Ride Order Status Change",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "send_email": 1,
+    "state": "New",
+    "update_field": null,
+    "update_value": null,
+    "workflow_builder_id": "1"
+   },
+   {
+    "allow_edit": "All",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Ride Order Status Change",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "send_email": 1,
+    "state": "Approval Pendding",
+    "update_field": null,
+    "update_value": null,
+    "workflow_builder_id": "2"
+   },
+   {
+    "allow_edit": "All",
+    "avoid_status_override": 0,
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Ride Order Status Change",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "send_email": 1,
+    "state": "Approved",
+    "update_field": null,
+    "update_value": null,
+    "workflow_builder_id": "3"
+   },
+   {
+    "allow_edit": "All",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Ride Order Status Change",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "send_email": 1,
+    "state": "Rejected",
+    "update_field": null,
+    "update_value": null,
+    "workflow_builder_id": "4"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Request Approval",
+    "allow_self_approval": 1,
+    "allowed": "All",
+    "condition": null,
+    "next_state": "Approval Pendding",
+    "parent": "Ride Order Status Change",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "send_email_to_creator": 0,
+    "state": "New",
+    "workflow_builder_id": "action-1"
+   },
+   {
+    "action": "Reject",
+    "allow_self_approval": 1,
+    "allowed": "Vehicle Auditor",
+    "condition": null,
+    "next_state": "Rejected",
+    "parent": "Ride Order Status Change",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "send_email_to_creator": 0,
+    "state": "Approval Pendding",
+    "workflow_builder_id": "action-2"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Vehicle Auditor",
+    "condition": null,
+    "next_state": "Approved",
+    "parent": "Ride Order Status Change",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "send_email_to_creator": 0,
+    "state": "Approval Pendding",
+    "workflow_builder_id": "action-3"
+   }
+  ],
+  "workflow_data": "[{\"type\":\"state\",\"dimensions\":{\"width\":82,\"height\":53},\"handleBounds\":{\"source\":[{\"id\":\"top\",\"position\":\"top\",\"x\":37.4666748046875,\"y\":-11,\"width\":7,\"height\":7},{\"id\":\"right\",\"position\":\"right\",\"x\":85.95001220703125,\"y\":23,\"width\":7,\"height\":7},{\"id\":\"bottom\",\"position\":\"bottom\",\"x\":37.4666748046875,\"y\":57,\"width\":7,\"height\":7},{\"id\":\"left\",\"position\":\"left\",\"x\":-11,\"y\":23,\"width\":7,\"height\":7}]},\"computedPosition\":{\"x\":42.5,\"y\":202.5,\"z\":0},\"id\":\"1\",\"position\":{\"x\":42.5,\"y\":202.5}},{\"type\":\"state\",\"dimensions\":{\"width\":162,\"height\":74},\"handleBounds\":{\"source\":[{\"id\":\"top\",\"position\":\"top\",\"x\":77.5,\"y\":-11,\"width\":7,\"height\":7},{\"id\":\"right\",\"position\":\"right\",\"x\":166,\"y\":33.5,\"width\":7,\"height\":7},{\"id\":\"bottom\",\"position\":\"bottom\",\"x\":77.5,\"y\":78,\"width\":7,\"height\":7},{\"id\":\"left\",\"position\":\"left\",\"x\":-11,\"y\":33.5,\"width\":7,\"height\":7}]},\"computedPosition\":{\"x\":524.5,\"y\":194.5,\"z\":0},\"id\":\"2\",\"position\":{\"x\":524.5,\"y\":194.5}},{\"type\":\"state\",\"dimensions\":{\"width\":117,\"height\":53},\"handleBounds\":{\"source\":[{\"id\":\"top\",\"position\":\"top\",\"x\":54.946957526036535,\"y\":-11.009522878063725,\"width\":7,\"height\":7},{\"id\":\"right\",\"position\":\"right\",\"x\":120.90348395522335,\"y\":22.99928804944245,\"width\":7,\"height\":7},{\"id\":\"bottom\",\"position\":\"bottom\",\"x\":54.946957526036535,\"y\":56.98292325460646,\"width\":7,\"height\":7},{\"id\":\"left\",\"position\":\"left\",\"x\":-11.009384802804078,\"y\":22.99928804944245,\"width\":7,\"height\":7}]},\"computedPosition\":{\"x\":927.0247700861387,\"y\":30.625941868263368,\"z\":0},\"id\":\"3\",\"position\":{\"x\":927.0247700861387,\"y\":30.625941868263368}},{\"type\":\"state\",\"dimensions\":{\"width\":111,\"height\":53},\"handleBounds\":{\"source\":[{\"id\":\"top\",\"position\":\"top\",\"x\":51.75465752301614,\"y\":-11.009568903150273,\"width\":7,\"height\":7},{\"id\":\"right\",\"position\":\"right\",\"x\":114.54410569661125,\"y\":22.99928804944245,\"width\":7,\"height\":7},{\"id\":\"bottom\",\"position\":\"bottom\",\"x\":51.75465752301614,\"y\":56.98292325460646,\"width\":7,\"height\":7},{\"id\":\"left\",\"position\":\"left\",\"x\":-11.009384802804078,\"y\":22.99928804944245,\"width\":7,\"height\":7}]},\"computedPosition\":{\"x\":942.0265932234515,\"y\":372.416812690061,\"z\":0},\"id\":\"4\",\"position\":{\"x\":942.0265932234515,\"y\":372.416812690061}},{\"type\":\"action\",\"dimensions\":{\"width\":140,\"height\":33},\"handleBounds\":{\"source\":[{\"id\":\"top\",\"position\":\"top\",\"x\":67.16668701171875,\"y\":-2,\"width\":6,\"height\":6},{\"id\":\"right\",\"position\":\"right\",\"x\":136.33331298828125,\"y\":13.5,\"width\":6,\"height\":6},{\"id\":\"bottom\",\"position\":\"bottom\",\"x\":67.16668701171875,\"y\":29,\"width\":6,\"height\":6},{\"id\":\"left\",\"position\":\"left\",\"x\":-2,\"y\":13.5,\"width\":6,\"height\":6}]},\"computedPosition\":{\"x\":258.5,\"y\":214.5,\"z\":0},\"id\":\"action-1\",\"position\":{\"x\":258.5,\"y\":214.5},\"data\":{\"from_id\":\"1\",\"to_id\":\"2\"}},{\"type\":\"action\",\"dimensions\":{\"width\":64,\"height\":33},\"handleBounds\":{\"source\":[{\"id\":\"top\",\"position\":\"top\",\"x\":28.95155103612197,\"y\":-2.0174319255370032,\"width\":6,\"height\":6},{\"id\":\"right\",\"position\":\"right\",\"x\":59.898920620574096,\"y\":13.49924383880596,\"width\":6,\"height\":6},{\"id\":\"bottom\",\"position\":\"bottom\",\"x\":28.95155103612197,\"y\":28.994384820041002,\"width\":6,\"height\":6},{\"id\":\"left\",\"position\":\"left\",\"x\":-1.9959757365280197,\"y\":13.49924383880596,\"width\":6,\"height\":6}]},\"computedPosition\":{\"x\":795.2123279092341,\"y\":383.6867754376689,\"z\":0},\"id\":\"action-2\",\"position\":{\"x\":795.2123279092341,\"y\":383.6867754376689},\"data\":{\"from_id\":\"2\",\"to_id\":\"4\"}},{\"type\":\"action\",\"dimensions\":{\"width\":78,\"height\":33},\"handleBounds\":{\"source\":[{\"id\":\"top\",\"position\":\"top\",\"x\":36.11964723529906,\"y\":-1.9959364394785528,\"width\":6,\"height\":6},{\"id\":\"right\",\"position\":\"right\",\"x\":74.27802539694625,\"y\":13.49924383880596,\"width\":6,\"height\":6},{\"id\":\"bottom\",\"position\":\"bottom\",\"x\":36.11964723529906,\"y\":28.994384820041002,\"width\":6,\"height\":6},{\"id\":\"left\",\"position\":\"left\",\"x\":-1.9958185483301516,\"y\":13.49924383880596,\"width\":6,\"height\":6}]},\"computedPosition\":{\"x\":772.0649487140316,\"y\":40.91223806296523,\"z\":0},\"id\":\"action-3\",\"position\":{\"x\":772.0649487140316,\"y\":40.91223806296523},\"data\":{\"from_id\":\"2\",\"to_id\":\"3\"}},{\"sourceHandle\":\"right\",\"targetHandle\":\"left\",\"type\":\"transition\",\"source\":\"1\",\"target\":\"action-1\",\"updatable\":true,\"animated\":true,\"id\":\"vueflow__edge-1right-action-1left\",\"sourceX\":135.45001220703125,\"sourceY\":229,\"targetX\":256.5,\"targetY\":231},{\"sourceHandle\":\"right\",\"targetHandle\":\"left\",\"type\":\"transition\",\"source\":\"action-1\",\"target\":\"2\",\"updatable\":true,\"animated\":true,\"id\":\"vueflow__edge-action-1right-2left\",\"sourceX\":400.83331298828125,\"sourceY\":231,\"targetX\":513.5,\"targetY\":231.5,\"markerEnd\":{\"type\":\"arrow\",\"width\":15,\"height\":15,\"strokeWidth\":1.5,\"color\":\"#687178\"}},{\"sourceHandle\":\"bottom\",\"targetHandle\":\"left\",\"type\":\"transition\",\"source\":\"2\",\"target\":\"action-2\",\"updatable\":true,\"animated\":true,\"id\":\"vueflow__edge-2bottom-action-2left\",\"sourceX\":605.5,\"sourceY\":279.5,\"targetX\":793.216352172706,\"targetY\":400.1860192764749},{\"sourceHandle\":\"right\",\"targetHandle\":\"left\",\"type\":\"transition\",\"source\":\"action-2\",\"target\":\"4\",\"updatable\":true,\"animated\":true,\"id\":\"vueflow__edge-action-2right-4left\",\"sourceX\":861.1112485298082,\"sourceY\":400.1860192764749,\"targetX\":931.0172084206474,\"targetY\":398.91610073950346,\"markerEnd\":{\"type\":\"arrow\",\"width\":15,\"height\":15,\"strokeWidth\":1.5,\"color\":\"#687178\"}},{\"sourceHandle\":\"top\",\"targetHandle\":\"left\",\"type\":\"transition\",\"source\":\"2\",\"target\":\"action-3\",\"updatable\":true,\"animated\":true,\"id\":\"vueflow__edge-2top-action-3left\",\"sourceX\":605.5,\"sourceY\":183.5,\"targetX\":770.0691301657015,\"targetY\":57.41148190177119},{\"sourceHandle\":\"right\",\"targetHandle\":\"left\",\"type\":\"transition\",\"source\":\"action-3\",\"target\":\"3\",\"updatable\":true,\"animated\":true,\"id\":\"vueflow__edge-action-3right-3left\",\"sourceX\":852.3429741109778,\"sourceY\":57.41148190177119,\"targetX\":916.0153852833346,\"targetY\":57.125229917705816,\"markerEnd\":{\"type\":\"arrow\",\"width\":15,\"height\":15,\"strokeWidth\":1.5,\"color\":\"#687178\"}}]",
+  "workflow_name": "Ride Order Status Change",
+  "workflow_state_field": "workflow_state"
+ }
+]

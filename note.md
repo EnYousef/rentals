@@ -80,3 +80,9 @@ Get Fixtures by:
 ```
 bench --site irfan.cabs export-fixtures
 ```
+-----------------------------------
+Server Script:
+to enable run this command
+```
+bench set-config -g server_script_enabled 1
+```

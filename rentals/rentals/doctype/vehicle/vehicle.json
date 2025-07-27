@@ -131,7 +131,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2025-07-06 16:51:30.788294",
+ "modified": "2025-07-08 12:10:08.011870",
  "modified_by": "Administrator",
  "module": "Rentals",
  "name": "Vehicle",
@@ -172,6 +172,30 @@
    "read": 1,
    "report": 1,
    "role": "Vehicle Supervisor"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Vehicle Auditor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Vehicle Auditor",
+   "share": 1,
+   "write": 1
   }
  ],
  "route": "cars",
